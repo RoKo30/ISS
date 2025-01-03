@@ -17,7 +17,7 @@ public class MissileMovement : MonoBehaviour
     [SerializeField]
     private float coneAngle = 30f; // Angle of the detection cone
 
-    private Transform target; // The jet the missile is chasing
+    private GameObject target; // The jet the missile is chasing
     
     [SerializeField]
     private GameObject explosionPrefab; // Prefab for the explosion effect
@@ -34,7 +34,7 @@ public class MissileMovement : MonoBehaviour
         GameObject jet = GameObject.FindWithTag("Jet");
         if (jet != null)
         {
-            target = jet.transform;
+            target = jet;
         }
         else
         {
@@ -45,7 +45,7 @@ public class MissileMovement : MonoBehaviour
     private void Update()
     {
         // Apply constant forward movement
-        transform.Translate(Vector3.forward * forwardSpeed * Time.deltaTime);
+        transform.Translate(Vector3.forward * (forwardSpeed * Time.deltaTime));
 
         // If there's a target, check for collision and adjust rotation
         if (target != null)
@@ -130,7 +130,7 @@ public class MissileMovement : MonoBehaviour
                 Debug.DrawRay(transform.position, rayDirection * raycastDistance, Color.red);
 
                 // Check if the hit object is the target
-                if (hit.collider.transform == target)
+                if (hit.collider.gameObject.tag == "Jet")
                 {
                     targetDetected = true;
                 }
@@ -140,14 +140,13 @@ public class MissileMovement : MonoBehaviour
                 Debug.DrawRay(transform.position, rayDirection * raycastDistance, Color.green);
             }
         }
-
         return targetDetected;
     }
 
     private void RotateTowardsTarget()
     {
         // Calculate the direction to the target
-        Vector3 directionToTarget = (target.position - transform.position).normalized;
+        Vector3 directionToTarget = (target.transform.position - transform.position).normalized;
 
         // Calculate the target rotation
         Quaternion targetRotation = Quaternion.LookRotation(directionToTarget);
