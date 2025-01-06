@@ -15,7 +15,7 @@ D:/TRECA GODINA/ISS/ISS_PROJEKT/ISS/ISS_Sim
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-50530
+51149
 Successfully changed project path to: D:/TRECA GODINA/ISS/ISS_PROJEKT/ISS/ISS_Sim
 D:/TRECA GODINA/ISS/ISS_PROJEKT/ISS/ISS_Sim
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -49,12 +49,12 @@ D:/TRECA GODINA/ISS/ISS_PROJEKT/ISS/ISS_Sim
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [20016] Host "[IP] 192.168.56.1 [Port] 0 [Flags] 2 [Guid] 1090315039 [EditorId] 1090315039 [Version] 1048832 [Id] WindowsEditor(7,eni) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [2728] Host "[IP] 192.168.56.1 [Port] 0 [Flags] 2 [Guid] 211461327 [EditorId] 211461327 [Version] 1048832 [Id] WindowsEditor(7,eni) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [20016] Host "[IP] 192.168.56.1 [Port] 0 [Flags] 2 [Guid] 1090315039 [EditorId] 1090315039 [Version] 1048832 [Id] WindowsEditor(7,eni) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [2728] Host "[IP] 192.168.56.1 [Port] 0 [Flags] 2 [Guid] 211461327 [EditorId] 211461327 [Version] 1048832 [Id] WindowsEditor(7,eni) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
 [Physics::Module] Initialized MultithreadedJobDispatcher with 7 workers.
-Refreshing native plugins compatible for Editor in 33.01 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 5.02 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.28f1 (6bae5ce6b222)
 [Subsystems] Discovering subsystems at path D:/TRECA GODINA/ISS/Editor/Data/Resources/UnitySubsystems
@@ -70,44 +70,44 @@ Initialize mono
 Mono path[0] = 'D:/TRECA GODINA/ISS/Editor/Data/Managed'
 Mono path[1] = 'D:/TRECA GODINA/ISS/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'D:/TRECA GODINA/ISS/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56268
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56780
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: D:/TRECA GODINA/ISS/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.004351 seconds.
-- Loaded All Assemblies, in  0.682 seconds
+Registered in 0.002056 seconds.
+- Loaded All Assemblies, in  0.397 seconds
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.489 seconds
-Domain Reload Profiling: 1172ms
-	BeginReloadAssembly (267ms)
+- Finished resetting the current domain, in  0.303 seconds
+Domain Reload Profiling: 700ms
+	BeginReloadAssembly (114ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (57ms)
-	RebuildNativeTypeToScriptingClass (18ms)
-	initialDomainReloadingComplete (75ms)
-	LoadAllAssembliesAndSetupDomain (264ms)
-		LoadAssemblies (266ms)
+		CreateAndSetChildDomain (2ms)
+	RebuildCommonClasses (47ms)
+	RebuildNativeTypeToScriptingClass (10ms)
+	initialDomainReloadingComplete (52ms)
+	LoadAllAssembliesAndSetupDomain (174ms)
+		LoadAssemblies (111ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (262ms)
-			TypeCache.Refresh (259ms)
-				TypeCache.ScanAssembly (231ms)
+		AnalyzeDomain (172ms)
+			TypeCache.Refresh (171ms)
+				TypeCache.ScanAssembly (158ms)
 			ScanForSourceGeneratedMonoScriptInfo (0ms)
-			ResolveRequiredComponents (1ms)
-	FinalizeReload (490ms)
+			ResolveRequiredComponents (0ms)
+	FinalizeReload (304ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (377ms)
+		SetupLoadedEditorAssemblies (237ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (12ms)
-			SetLoadedEditorAssemblies (12ms)
+			InitializePlatformSupportModulesInManaged (7ms)
+			SetLoadedEditorAssemblies (7ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (4ms)
-			ProcessInitializeOnLoadAttributes (270ms)
-			ProcessInitializeOnLoadMethodAttributes (79ms)
+			BeforeProcessingInitializeOnLoad (2ms)
+			ProcessInitializeOnLoadAttributes (167ms)
+			ProcessInitializeOnLoadMethodAttributes (54ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -115,55 +115,55 @@ Domain Reload Profiling: 1172ms
 ========================================================================
 Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  1.246 seconds
-Refreshing native plugins compatible for Editor in 4.71 ms, found 3 plugins.
+- Loaded All Assemblies, in  0.711 seconds
+Refreshing native plugins compatible for Editor in 3.24 ms, found 3 plugins.
 Native extension for WindowsStandalone target not found
 Package Manager log level set to [2]
 [Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.159 seconds
-Domain Reload Profiling: 2405ms
-	BeginReloadAssembly (223ms)
+- Finished resetting the current domain, in  0.735 seconds
+Domain Reload Profiling: 1446ms
+	BeginReloadAssembly (158ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (7ms)
+		DisableScriptedObjects (4ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (32ms)
-	RebuildCommonClasses (56ms)
-	RebuildNativeTypeToScriptingClass (20ms)
-	initialDomainReloadingComplete (63ms)
-	LoadAllAssembliesAndSetupDomain (884ms)
-		LoadAssemblies (594ms)
+		CreateAndSetChildDomain (25ms)
+	RebuildCommonClasses (47ms)
+	RebuildNativeTypeToScriptingClass (14ms)
+	initialDomainReloadingComplete (43ms)
+	LoadAllAssembliesAndSetupDomain (448ms)
+		LoadAssemblies (292ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (423ms)
-			TypeCache.Refresh (380ms)
-				TypeCache.ScanAssembly (348ms)
-			ScanForSourceGeneratedMonoScriptInfo (29ms)
-			ResolveRequiredComponents (10ms)
-	FinalizeReload (1160ms)
+		AnalyzeDomain (248ms)
+			TypeCache.Refresh (220ms)
+				TypeCache.ScanAssembly (199ms)
+			ScanForSourceGeneratedMonoScriptInfo (21ms)
+			ResolveRequiredComponents (6ms)
+	FinalizeReload (736ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (873ms)
+		SetupLoadedEditorAssemblies (564ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (7ms)
-			SetLoadedEditorAssemblies (7ms)
+			InitializePlatformSupportModulesInManaged (5ms)
+			SetLoadedEditorAssemblies (5ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (90ms)
-			ProcessInitializeOnLoadAttributes (732ms)
-			ProcessInitializeOnLoadMethodAttributes (34ms)
-			AfterProcessingInitializeOnLoad (2ms)
+			BeforeProcessingInitializeOnLoad (61ms)
+			ProcessInitializeOnLoadAttributes (459ms)
+			ProcessInitializeOnLoadMethodAttributes (30ms)
+			AfterProcessingInitializeOnLoad (3ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
 		AwakeInstancesAfterBackupRestoration (9ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
-Refreshing native plugins compatible for Editor in 3.59 ms, found 3 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 2.67 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3295 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 54 unused Assets / (0.6 MB). Loaded Objects now: 3770.
-Memory consumption went from 148.1 MB to 147.5 MB.
-Total: 5.631300 ms (FindLiveObjects: 0.678800 ms CreateObjectMapping: 0.656300 ms MarkObjects: 3.885300 ms  DeleteObjects: 0.408400 ms)
+Unloading 54 unused Assets / (0.6 MB). Loaded Objects now: 3772.
+Memory consumption went from 147.6 MB to 147.1 MB.
+Total: 4.815900 ms (FindLiveObjects: 0.346700 ms CreateObjectMapping: 0.305100 ms MarkObjects: 3.867400 ms  DeleteObjects: 0.294300 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
@@ -181,230 +181,155 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 3699.859227 seconds.
-  path: Assets/Scripts
-  artifactKey: Guid(2550d5d41d2e8be4698648cad4ebe06c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts using Guid(2550d5d41d2e8be4698648cad4ebe06c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8561b21434f82932a79bee2e19779c81') in 0.003699 seconds
+  Time since last request: 5769.592696 seconds.
+  path: Assets/DownloadedAssets/CartoonMilitaryModelPack/OriginalMeshes&Materials/WarShip/AircraftCarrier/AircraftCarrier_01.fbx
+  artifactKey: Guid(d1d7ae457372a4860b410b888f1fc4f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DownloadedAssets/CartoonMilitaryModelPack/OriginalMeshes&Materials/WarShip/AircraftCarrier/AircraftCarrier_01.fbx using Guid(d1d7ae457372a4860b410b888f1fc4f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eeec1ce24d2fb82d6d367bdf09a4f4c4') in 0.159105 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 13
+========================================================================
+Received Import Request.
+  Time since last request: 0.000045 seconds.
+  path: Assets/DownloadedAssets/CartoonMilitaryModelPack/OriginalMeshes&Materials/APC/APC_01.fbx
+  artifactKey: Guid(0fd1598056c314eb78a26393214164cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DownloadedAssets/CartoonMilitaryModelPack/OriginalMeshes&Materials/APC/APC_01.fbx using Guid(0fd1598056c314eb78a26393214164cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f8665203609e892a9eee06116a65d67') in 0.071664 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 59
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/DownloadedAssets/CartoonMilitaryModelPack/OriginalMeshes&Materials/WarShip/AircraftCarrier/AircraftCarrier_02.fbx
+  artifactKey: Guid(3d8254d2b05d04c828bdabc84003e979) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DownloadedAssets/CartoonMilitaryModelPack/OriginalMeshes&Materials/WarShip/AircraftCarrier/AircraftCarrier_02.fbx using Guid(3d8254d2b05d04c828bdabc84003e979) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b3ecc1f6b0ab53253210857e2a944df') in 0.020321 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 13
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/DownloadedAssets/CartoonMilitaryModelPack/Prefebs/APC_Prefebs/APC_02_Prefeb.prefab
+  artifactKey: Guid(7fc9505d088e64305b1ff6f5ab1518ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DownloadedAssets/CartoonMilitaryModelPack/Prefebs/APC_Prefebs/APC_02_Prefeb.prefab using Guid(7fc9505d088e64305b1ff6f5ab1518ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4fd67b0693dabe3af4adf25e21a4ed76') in 0.016002 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 90
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/DownloadedAssets/CartoonMilitaryModelPack/Prefebs/APC_Prefebs/APC_01_Prefeb.prefab
+  artifactKey: Guid(cb69247b0c7cd40c9b21d1ca3c59d031) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DownloadedAssets/CartoonMilitaryModelPack/Prefebs/APC_Prefebs/APC_01_Prefeb.prefab using Guid(cb69247b0c7cd40c9b21d1ca3c59d031) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a71e72d7d6918a5826aea4b04add3983') in 0.013837 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 61
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/DownloadedAssets/CartoonMilitaryModelPack/OriginalMeshes&Materials/APC/APC_02.fbx
+  artifactKey: Guid(899617faa4cbc43d890efddae457601a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DownloadedAssets/CartoonMilitaryModelPack/OriginalMeshes&Materials/APC/APC_02.fbx using Guid(899617faa4cbc43d890efddae457601a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fbf979eaf09b682454f72dbb35d7abe7') in 0.133045 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 88
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/DownloadedAssets/CartoonMilitaryModelPack/Prefebs/WarShip_Prefebs/AircraftCarrier_01_Prefeb.prefab
+  artifactKey: Guid(7ed9b64ac5cd84df09f20cfb9e04bc73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DownloadedAssets/CartoonMilitaryModelPack/Prefebs/WarShip_Prefebs/AircraftCarrier_01_Prefeb.prefab using Guid(7ed9b64ac5cd84df09f20cfb9e04bc73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4925b9481151ccdcfe85e0647584cbed') in 0.009276 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 15
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/DownloadedAssets/CartoonMilitaryModelPack/Prefebs/WarShip_Prefebs/AircraftCarrier_02_Prefeb.prefab
+  artifactKey: Guid(476e1f13298324719935960a0a668395) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DownloadedAssets/CartoonMilitaryModelPack/Prefebs/WarShip_Prefebs/AircraftCarrier_02_Prefeb.prefab using Guid(476e1f13298324719935960a0a668395) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '460fb67ea5ab2a01b22640d2c0a28998') in 0.011475 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 15
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.574 seconds
+Refreshing native plugins compatible for Editor in 3.65 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  2.498 seconds
+Domain Reload Profiling: 3073ms
+	BeginReloadAssembly (166ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (4ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (43ms)
+	RebuildCommonClasses (35ms)
+	RebuildNativeTypeToScriptingClass (15ms)
+	initialDomainReloadingComplete (34ms)
+	LoadAllAssembliesAndSetupDomain (324ms)
+		LoadAssemblies (375ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (39ms)
+			TypeCache.Refresh (13ms)
+				TypeCache.ScanAssembly (1ms)
+			ScanForSourceGeneratedMonoScriptInfo (14ms)
+			ResolveRequiredComponents (9ms)
+	FinalizeReload (2499ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (452ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (4ms)
+			SetLoadedEditorAssemblies (3ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (63ms)
+			ProcessInitializeOnLoadAttributes (359ms)
+			ProcessInitializeOnLoadMethodAttributes (22ms)
+			AfterProcessingInitializeOnLoad (2ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (6ms)
+Refreshing native plugins compatible for Editor in 2.20 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3265 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 45 unused Assets / (12.4 MB). Loaded Objects now: 3793.
+Memory consumption went from 158.7 MB to 146.3 MB.
+Total: 4.244900 ms (FindLiveObjects: 0.241400 ms CreateObjectMapping: 0.107300 ms MarkObjects: 2.684800 ms  DeleteObjects: 1.209500 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 821.064053 seconds.
+  path: Assets/ALP_Assets/Poplar Tree FREE
+  artifactKey: Guid(5940ab29e102975419588524b8041c44) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ALP_Assets/Poplar Tree FREE using Guid(5940ab29e102975419588524b8041c44) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eceae6b7408f5d9f094afc2e892fdc41') in 0.002484 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 0
 ========================================================================
 Received Import Request.
-  Time since last request: 1.392756 seconds.
-  path: Assets/Terrain/heightmapper-1733696092416.png
-  artifactKey: Guid(607b42569dc033f4aae8e5f02ac03b9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Terrain/heightmapper-1733696092416.png using Guid(607b42569dc033f4aae8e5f02ac03b9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '53b5ba12639cca9fd7d702e1b4d6d762') in 0.046409 seconds
+  Time since last request: 13.151468 seconds.
+  path: Assets/ALP_Assets/Poplar Tree FREE/Prefabs/PoplarTree001_pr.prefab
+  artifactKey: Guid(6770e849cebefb44eaa52103c9cf174f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ALP_Assets/Poplar Tree FREE/Prefabs/PoplarTree001_pr.prefab using Guid(6770e849cebefb44eaa52103c9cf174f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8b7405845e8ebe569039360bc5bfc732') in 1.745990 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
+Number of asset objects unloaded after import = 47
 ========================================================================
 Received Import Request.
-  Time since last request: 0.632594 seconds.
-  path: Assets/Terrain/Terrain_0_0_b00dbcf2-57f7-4745-8e06-a0adbd8991f7.asset
-  artifactKey: Guid(b1b3811cb51bda948a78ddb82b0cfadc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Terrain/Terrain_0_0_b00dbcf2-57f7-4745-8e06-a0adbd8991f7.asset using Guid(b1b3811cb51bda948a78ddb82b0cfadc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db43ef6b18aa2b9a4ad72bee836f6aeb') in 0.008344 seconds
+  Time since last request: 166.523145 seconds.
+  path: Assets/ALP_Assets/Poplar Tree FREE/Prefabs/PoplarTree001_pr.prefab
+  artifactKey: Guid(6770e849cebefb44eaa52103c9cf174f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ALP_Assets/Poplar Tree FREE/Prefabs/PoplarTree001_pr.prefab using Guid(6770e849cebefb44eaa52103c9cf174f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '15457c977c91aeca10c8cc2d07e376dc') in 0.165331 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 570.016383 seconds.
-  path: Assets/DownloadedAssets/CartoonMilitaryModelPack/Textures/WarShip_Texture/AircraftCarrier_01_Texture.png
-  artifactKey: Guid(90aa8a74200df4086a6ef99670442b7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DownloadedAssets/CartoonMilitaryModelPack/Textures/WarShip_Texture/AircraftCarrier_01_Texture.png using Guid(90aa8a74200df4086a6ef99670442b7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '325bea0f0061fc1453664b11a356a09b') in 0.011858 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.842382 seconds.
-  path: Assets/DownloadedAssets/CartoonMilitaryModelPack/Textures/Other_Texture/AirPlane_Field_Texture3.png
-  artifactKey: Guid(7ff97f612a7de4157b7131620c215e3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DownloadedAssets/CartoonMilitaryModelPack/Textures/Other_Texture/AirPlane_Field_Texture3.png using Guid(7ff97f612a7de4157b7131620c215e3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '10a6253f77f7cfb5cfc10537f02fdd74') in 0.009663 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/DownloadedAssets/CartoonMilitaryModelPack/Textures/APC_Texture/APC_02_Texture.png
-  artifactKey: Guid(fa2897cb315dd4b6fb64aa764dcfb02f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DownloadedAssets/CartoonMilitaryModelPack/Textures/APC_Texture/APC_02_Texture.png using Guid(fa2897cb315dd4b6fb64aa764dcfb02f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '02ff4db2d19f1f01dbac8364c68d7064') in 0.007411 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000021 seconds.
-  path: Assets/DownloadedAssets/CartoonMilitaryModelPack/Textures/Other_Texture/AirPlane_Field_Texture2.png
-  artifactKey: Guid(0ad229bd555a54f219922549d525b0bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DownloadedAssets/CartoonMilitaryModelPack/Textures/Other_Texture/AirPlane_Field_Texture2.png using Guid(0ad229bd555a54f219922549d525b0bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d81c937fcfbbac83463f17b2bbc61fa') in 0.011052 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 1.390688 seconds.
-  path: Assets/DownloadedAssets/CartoonMilitaryModelPack/Textures/APC_Texture/APC_03_Texture.png
-  artifactKey: Guid(0f54afd65c89e4759a4a6119f54d553c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DownloadedAssets/CartoonMilitaryModelPack/Textures/APC_Texture/APC_03_Texture.png using Guid(0f54afd65c89e4759a4a6119f54d553c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f567bd14e65bd2c2f59f0c45222ea423') in 0.013562 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 2.067177 seconds.
-  path: Assets/DownloadedAssets/CartoonMilitaryModelPack/Textures/Building_Texture/GuardPoint_03_Texture.png
-  artifactKey: Guid(62132b45771b44e40baf6036af73cec8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DownloadedAssets/CartoonMilitaryModelPack/Textures/Building_Texture/GuardPoint_03_Texture.png using Guid(62132b45771b44e40baf6036af73cec8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '214225e348ecc35d56752b92725b2bc6') in 0.008640 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.565153 seconds.
-  path: Assets/DownloadedAssets/CartoonMilitaryModelPack/Textures/CustomParts/LandingGear_Front_Texture.png
-  artifactKey: Guid(65a199a13a4354f3296c8c684512f626) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DownloadedAssets/CartoonMilitaryModelPack/Textures/CustomParts/LandingGear_Front_Texture.png using Guid(65a199a13a4354f3296c8c684512f626) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e1fa9c65e745768a59696325611d5bd') in 0.014834 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/DownloadedAssets/Sayantan/Props/Small/CruiseMissile/Scenes/Demo_Day_Standard/Lightmap-0_comp_light.exr
-  artifactKey: Guid(f15f6a71c5cb4134c818c56f5ade0d82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DownloadedAssets/Sayantan/Props/Small/CruiseMissile/Scenes/Demo_Day_Standard/Lightmap-0_comp_light.exr using Guid(f15f6a71c5cb4134c818c56f5ade0d82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd02636af5b66f2a7bd360c0aba50e7fe') in 0.163601 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 10.361684 seconds.
-  path: Assets/DownloadedAssets/CartoonMilitaryModelPack/Textures/WarShip_Texture/Destroyer_01_Texture.png
-  artifactKey: Guid(c4c371075d8e1497e83c6d5d8f45a30a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DownloadedAssets/CartoonMilitaryModelPack/Textures/WarShip_Texture/Destroyer_01_Texture.png using Guid(c4c371075d8e1497e83c6d5d8f45a30a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '17f6e97ce702577c73dbc85972c398c0') in 0.011207 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000056 seconds.
-  path: Assets/DownloadedAssets/CartoonMilitaryModelPack/Textures/WarShip_Texture/Protector_01_Texture.png
-  artifactKey: Guid(4c0d9109dc7284ac9b1a6c4b0b62b258) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DownloadedAssets/CartoonMilitaryModelPack/Textures/WarShip_Texture/Protector_01_Texture.png using Guid(4c0d9109dc7284ac9b1a6c4b0b62b258) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '25664a2d0d6451299909064156aa5e56') in 0.018563 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 22.914887 seconds.
-  path: Assets/DownloadedAssets/Sayantan/Misc/ConcIndustrial_mask.tga
-  artifactKey: Guid(b0b5005797e0b9b4bb25508534d4486e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DownloadedAssets/Sayantan/Misc/ConcIndustrial_mask.tga using Guid(b0b5005797e0b9b4bb25508534d4486e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2b203089eeb528b791d800f5629863c8') in 0.041359 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 15.975547 seconds.
-  path: Assets/DownloadedAssets/CartoonMilitaryModelPack/Textures/Bomber_Texture/Bomber_02_Texture.png
-  artifactKey: Guid(b27e2e16bdae74a0694e56ef89b65e69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DownloadedAssets/CartoonMilitaryModelPack/Textures/Bomber_Texture/Bomber_02_Texture.png using Guid(b27e2e16bdae74a0694e56ef89b65e69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1a0ea7e21de1c4fb397028a84278bf3d') in 0.014836 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.035843 seconds.
-  path: Assets/DownloadedAssets/CartoonMilitaryModelPack/Textures/Chopper_Texture/Chopper_01_Texture.png
-  artifactKey: Guid(06daf8ceb666b4a2792e55111932f0ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DownloadedAssets/CartoonMilitaryModelPack/Textures/Chopper_Texture/Chopper_01_Texture.png using Guid(06daf8ceb666b4a2792e55111932f0ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b291e06ceeeda5ebb64b6e9465fb278') in 0.021647 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.267282 seconds.
-  path: Assets/DownloadedAssets/CartoonMilitaryModelPack/Textures/Chopper_Texture/Chopper_03_Texture.png
-  artifactKey: Guid(996a80a485d9742c397fd22ce6b03ce9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DownloadedAssets/CartoonMilitaryModelPack/Textures/Chopper_Texture/Chopper_03_Texture.png using Guid(996a80a485d9742c397fd22ce6b03ce9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f1a0b32d475b90ac7143b144a8168ee8') in 0.009598 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 3.111109 seconds.
-  path: Assets/DownloadedAssets/CartoonMilitaryModelPack/Textures/Building_Texture/Fence_02_Texture.png
-  artifactKey: Guid(cee1f2f86813b457ba0f967366f05401) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DownloadedAssets/CartoonMilitaryModelPack/Textures/Building_Texture/Fence_02_Texture.png using Guid(cee1f2f86813b457ba0f967366f05401) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea48c08b07c960e96925ea82e18aaf40') in 0.035132 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 2.001485 seconds.
-  path: Assets/DownloadedAssets/CartoonMilitaryModelPack/Textures/Building_Texture/Hellipad_Texture.png
-  artifactKey: Guid(41c379bb4996c47e8a9b75ec79009239) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DownloadedAssets/CartoonMilitaryModelPack/Textures/Building_Texture/Hellipad_Texture.png using Guid(41c379bb4996c47e8a9b75ec79009239) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '34fcaf646c215c22667472d4af72933a') in 0.014081 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.032042 seconds.
-  path: Assets/DownloadedAssets/WW2_German_soilders/Soilders/FBX_soilders/Wehrmacht_B/textures/Helmet_Wehrmacht_A.png
-  artifactKey: Guid(81b3db960e3ce5b45ad72e3464a2f284) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DownloadedAssets/WW2_German_soilders/Soilders/FBX_soilders/Wehrmacht_B/textures/Helmet_Wehrmacht_A.png using Guid(81b3db960e3ce5b45ad72e3464a2f284) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5444c92105ed741ef1c177c553aabb9c') in 0.018888 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.292837 seconds.
-  path: Assets/DownloadedAssets/CartoonMilitaryModelPack/Textures/HoverCraft_Texture/HoverCraft_Texture.png
-  artifactKey: Guid(cd5596e295a624443af380e30c7747cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DownloadedAssets/CartoonMilitaryModelPack/Textures/HoverCraft_Texture/HoverCraft_Texture.png using Guid(cd5596e295a624443af380e30c7747cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dccd213a50308a5ae94cfe7f66404905') in 0.015410 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.327384 seconds.
-  path: Assets/DownloadedAssets/CartoonMilitaryModelPack/Textures/Jet_Texture/Jet_01_Texture.png
-  artifactKey: Guid(d6969b0624ccb42678e607471ee70068) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DownloadedAssets/CartoonMilitaryModelPack/Textures/Jet_Texture/Jet_01_Texture.png using Guid(d6969b0624ccb42678e607471ee70068) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a0e91376e6a97c868959891ac260501') in 0.014838 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.311936 seconds.
-  path: Assets/DownloadedAssets/CartoonMilitaryModelPack/Textures/Jet_Texture/Jet_03_Texture.png
-  artifactKey: Guid(1543b99d71ce64c9e8bf432e02ad66de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DownloadedAssets/CartoonMilitaryModelPack/Textures/Jet_Texture/Jet_03_Texture.png using Guid(1543b99d71ce64c9e8bf432e02ad66de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f7ef17350bfec1d5e582512f6e101b2e') in 0.014930 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.417819 seconds.
-  path: Assets/DownloadedAssets/CartoonMilitaryModelPack/Textures/Jet_Texture/Jet_05_Texture.png
-  artifactKey: Guid(8755c584025f84772bfc557715ca7312) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DownloadedAssets/CartoonMilitaryModelPack/Textures/Jet_Texture/Jet_05_Texture.png using Guid(8755c584025f84772bfc557715ca7312) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e4c839a0804d7cd8ed87078f67abf007') in 0.012406 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.137108 seconds.
-  path: Assets/DownloadedAssets/WW2_German_soilders/Bullet_prefabs/textures/K98_bulletCase.png
-  artifactKey: Guid(bc582dee1b10f0b4e985ed57817fdc76) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DownloadedAssets/WW2_German_soilders/Bullet_prefabs/textures/K98_bulletCase.png using Guid(bc582dee1b10f0b4e985ed57817fdc76) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c011fad2e9f6e6d119e69c9447f674a') in 0.008266 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 2.127040 seconds.
-  path: Assets/DownloadedAssets/Sayantan/Props/Small/CruiseMissile/Scenes/Demo_Day_Standard/Lightmap-0_comp_shadowmask.png
-  artifactKey: Guid(de845ed3ce45d3c4a8fdb0e2e5c6d2d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DownloadedAssets/Sayantan/Props/Small/CruiseMissile/Scenes/Demo_Day_Standard/Lightmap-0_comp_shadowmask.png using Guid(de845ed3ce45d3c4a8fdb0e2e5c6d2d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '034c671d22414ea1841ccfa8f9b5b5ac') in 0.031197 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 6.369463 seconds.
-  path: Assets/DownloadedAssets/WW2_German_soilders/Bullet_prefabs/textures/Luger_bulletCase.png
-  artifactKey: Guid(3585e49e06c83b34c90998fff05016ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DownloadedAssets/WW2_German_soilders/Bullet_prefabs/textures/Luger_bulletCase.png using Guid(3585e49e06c83b34c90998fff05016ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a545b91f78b8347e17217f57c1dc31de') in 0.027402 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.059578 seconds.
-  path: Assets/DownloadedAssets/WW2_German_soilders/Bullet_prefabs/textures/MG42_bulletCase.png
-  artifactKey: Guid(62f20ca29bdf23d47868a3838a2a9d5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DownloadedAssets/WW2_German_soilders/Bullet_prefabs/textures/MG42_bulletCase.png using Guid(62f20ca29bdf23d47868a3838a2a9d5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1fd1db000ef242d89d786037c54777e0') in 0.006377 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
-TcpMessagingSession - receive error: operation aborted. errorcode: 995, details: The I/O operation has been aborted because of either a thread exit or an application request.
-AssetImportWorker is now disconnected from the server
-Process exiting
-Exiting without the bug reporter. Application will terminate with return code 0
+Number of asset objects unloaded after import = 47
