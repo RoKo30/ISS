@@ -2058,6 +2058,7 @@ namespace UnityEditor.TerrainTools
             {
                 GetAndSetActiveRenderPipelineSettings();
             }
+            m_PreviewMaterial.DisableKeyword("_SPLATMAP_PREVIEW");
             for (int i = 0; i < m_Terrains.Length; i++)
             {
                 if (m_Terrains[i] != null)

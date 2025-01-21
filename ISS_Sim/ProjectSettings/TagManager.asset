@@ -5,6 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - Jet
+  - schutzstaffel_b
+  - schutzstaffel_a
+  - wehrmacht_c
+  - wehrmacht_b
+  - wehrmacht_a
+  - Terrain
   layers:
   - Default
   - TransparentFX
