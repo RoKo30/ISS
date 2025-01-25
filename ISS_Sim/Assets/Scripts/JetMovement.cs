@@ -20,7 +20,7 @@ public class JetMovement : MonoBehaviour
     {
         // Initialize with the current rotation
         targetRotation = transform.rotation;
-
+        Debug.Log($"Jet Start: forwardSpeed= {forwardSpeed} ");
         // Start changing direction periodically
         InvokeRepeating(nameof(ChangeDirection), 0, 7f); // Adjust time as needed
     }

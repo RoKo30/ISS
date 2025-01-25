@@ -4,55 +4,38 @@ using UnityEngine;
 [RequireComponent(typeof(Collider))]
 public class MissileMovement : MonoBehaviour
 {
-    [Header("Approx. FIM-92 Stinger Speeds")]
-    [SerializeField] private float startSpeed = 50f;  
-    [SerializeField] private float acceleration = 40; 
-    [SerializeField] private float maxSpeed = 250f;      
-
-
-    [Header("Turning Speeds (Degrees per second)")]
-    [SerializeField] private float automaticTurningSpeed = 5f;  
-    [SerializeField] private float manualTurningSpeed = 20f;    
-
-    [Header("Detection")]
-    [Tooltip("Max angle from forward to consider 'locked' on target.")]
-    [SerializeField] private float maxLockAngle = 45f;    
-
-    [SerializeField] private float maxDetectionDistance = 2000f; 
-
-    [Header("Explosion & Camera")]
+    [SerializeField] private float startSpeed = 50f;
+    [SerializeField] private float acceleration = 40f;
+    [SerializeField] private float maxSpeed = 250f;
+    [SerializeField] private float raycastDistance = 1000f;
+    [SerializeField] private int rayCount = 30;
+    [SerializeField] private float coneAngle = 30f;
+    [SerializeField] private float automaticTurningSpeed = 5f;
+    [SerializeField] private float manualTurningSpeed = 20f;
+    
+    [SerializeField] private float missileMass = 10.2f;
     [SerializeField] private GameObject explosionPrefab;
     [SerializeField] private GameObject collisionCameraPrefab;
     [SerializeField] private Vector3 cameraOffset = new Vector3(0, 5, -10);
-
-    [Header("Physical Properties")]
-    [SerializeField] private float missileMass = 10f;
 
     private Rigidbody rb;
     private GameObject target;
     private bool manualMode = false;
     private float currentSpeed;
+    private float pitch;
+    private float yaw;
 
-    private float pitch; 
-    private float yaw;   
-
-    private void Start()    
+    private void Start()
     {
-        Debug.Log($"Missile Start: startSpeed={startSpeed}, acceleration={acceleration}, maxSpeed={maxSpeed}");
-
-        Invoke(nameof(SelfDestruct), Random.Range(13f, 15f));
         rb = GetComponent<Rigidbody>();
         rb.mass = missileMass;
         rb.useGravity = false;
         rb.isKinematic = false;
         rb.collisionDetectionMode = CollisionDetectionMode.Continuous;
         currentSpeed = startSpeed;
+        Debug.Log($"Missile Start: startSpeed= {startSpeed} ");
 
-        target = GameObject.FindWithTag("Jet");
-        if (target == null)
-        {
-            Debug.LogWarning("No jet found with 'Jet' tag!");
-        }
+        Invoke(nameof(SelfDestruct), Random.Range(15f, 19f));
     }
 
     private void Update()
@@ -60,12 +43,10 @@ public class MissileMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.M))
         {
             manualMode = !manualMode;
-            Debug.Log(manualMode ? "Switched to Manual Mode" : "Switched to Automatic Mode");
         }
 
         pitch = 0f;
         yaw = 0f;
-
         if (Input.GetKey(KeyCode.W)) pitch = 1f;
         else if (Input.GetKey(KeyCode.S)) pitch = -1f;
 
@@ -76,70 +57,79 @@ public class MissileMovement : MonoBehaviour
     private void FixedUpdate()
     {
         currentSpeed = Mathf.Clamp(currentSpeed + acceleration * Time.fixedDeltaTime, 0f, maxSpeed);
-
         rb.velocity = transform.forward * currentSpeed;
 
         if (manualMode)
         {
             HandleManualControl();
         }
-        else if (target != null)
+        else
         {
-            HandleAutomaticControl();
+            if (target == null)
+            {
+                Perform3DConeRaycast();
+            }
+            else
+            {
+                HandleAutomaticControl();
+            }
         }
-
-        rb.MoveRotation(transform.rotation);
     }
 
-private void HandleManualControl()
-{
-    float pitchAmount = pitch * manualTurningSpeed * Time.fixedDeltaTime;
-    float yawAmount = yaw * manualTurningSpeed * Time.fixedDeltaTime;
-
-    transform.Rotate(pitchAmount, yawAmount, 0f, Space.Self);
-}
-
-
+    private void HandleManualControl()
+    {
+        float pitchAmount = pitch * manualTurningSpeed * Time.fixedDeltaTime;
+        float yawAmount = yaw * manualTurningSpeed * Time.fixedDeltaTime;
+        transform.Rotate(pitchAmount, yawAmount, 0f, Space.Self);
+    }
 
     private void HandleAutomaticControl()
     {
-        Vector3 toTarget = target.transform.position - transform.position;
-        if (toTarget.magnitude > maxDetectionDistance) return;
-
-        float angleToTarget = Vector3.Angle(transform.forward, toTarget);
-        if (angleToTarget > maxLockAngle) return; 
-
-        Vector3 directionToTarget = toTarget.normalized;
+        if (target == null) return;
+        Vector3 directionToTarget = (target.transform.position - transform.position).normalized;
         Quaternion desiredRotation = Quaternion.LookRotation(directionToTarget);
+        transform.rotation = Quaternion.Slerp(transform.rotation, desiredRotation, automaticTurningSpeed * Time.fixedDeltaTime);
+    }
 
-        transform.rotation = Quaternion.Slerp(
-            transform.rotation,
-            desiredRotation,
-            automaticTurningSpeed * Time.fixedDeltaTime
-        );
+    private void Perform3DConeRaycast()
+    {
+        for (int i = 0; i < rayCount; i++)
+        {
+            float angleH = Random.Range(-coneAngle / 2f, coneAngle / 2f);
+            float angleV = Random.Range(-coneAngle / 2f, coneAngle / 2f);
+            Quaternion rotation = Quaternion.Euler(angleV, angleH, 0f);
+            Vector3 rayDirection = rotation * transform.forward;
+
+            Ray ray = new Ray(transform.position, rayDirection);
+            if (Physics.Raycast(ray, out RaycastHit hit, raycastDistance))
+            {
+                Debug.DrawRay(transform.position, rayDirection * raycastDistance, Color.red);
+                if (hit.transform.CompareTag("Jet"))
+                {
+                    target = hit.transform.gameObject;
+                    break;
+                }
+            }
+            else
+            {
+                Debug.DrawRay(transform.position, rayDirection * raycastDistance, Color.green);
+            }
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.transform.CompareTag("Jet"))
         {
-            Debug.Log("Missile hit the jet!");
-            Vector3 hitPoint = collision.contacts[0].point;
-
-            InstantiateExplosion(hitPoint);
-            InstantiateCamera(hitPoint);
-
-            Destroy(collision.gameObject); 
-            Destroy(gameObject);           
+            InstantiateExplosion(collision.contacts[0].point);
+            InstantiateCamera(collision.contacts[0].point);
+            Destroy(collision.gameObject);
+            Destroy(gameObject);
         }
         else if (collision.transform.CompareTag("Terrain"))
         {
-            Debug.Log("Missile hit the terrain!");
-            Vector3 hitPoint = collision.contacts[0].point;
-
-            InstantiateExplosion(hitPoint);
-            InstantiateCamera(hitPoint);
-
+            InstantiateExplosion(collision.contacts[0].point);
+            InstantiateCamera(collision.contacts[0].point);
             Destroy(gameObject);
         }
     }
@@ -150,34 +140,22 @@ private void HandleManualControl()
         {
             Instantiate(explosionPrefab, position, Quaternion.identity);
         }
-        else
-        {
-            Debug.LogWarning("Explosion prefab is not assigned.");
-        }
     }
 
     private void InstantiateCamera(Vector3 collisionPoint)
     {
         if (collisionCameraPrefab != null)
         {
-            GameObject camObj = Instantiate(collisionCameraPrefab);
-            camObj.transform.position = collisionPoint + cameraOffset;
-            camObj.transform.LookAt(collisionPoint);
-        }
-        else
-        {
-            Debug.LogWarning("Collision camera prefab is not assigned.");
+            GameObject cameraObj = Instantiate(collisionCameraPrefab);
+            cameraObj.transform.position = collisionPoint + cameraOffset;
+            cameraObj.transform.LookAt(collisionPoint);
         }
     }
 
     private void SelfDestruct()
-{
-    Debug.Log("Missile self-destructed");
-
-    InstantiateExplosion(transform.position);
-
-    InstantiateCamera(transform.position);
-
-    Destroy(gameObject);
-}
+    {
+        InstantiateExplosion(transform.position);
+        InstantiateCamera(transform.position);
+        Destroy(gameObject);
+    }
 }
