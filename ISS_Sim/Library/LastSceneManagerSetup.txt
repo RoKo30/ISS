@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/SampleScene.unity
+- path: Assets/ALP_Assets/Poplar Tree FREE/Scenes/PoplarTreeScene.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
